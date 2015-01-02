@@ -1,8 +1,9 @@
 # RPi-WS2812-HAT
 WS2812B intelligent RGB-LED 8x8 Matrix HAT (Hardware Attached on Top) for Raspberry Pi Model A+ and B+.
 
+Shop: [RPi-WS2812-HAT](http://www.watterott.com/en/RPi-WS2812-HAT)
 
-![RPi-WS2812-HAT](https://raw.github.com/watterott/RPi-WS2812-HAT/master/img/rpi-ws2812-hat.jpg)
+[![RPi-WS2812-HAT](https://raw.github.com/watterott/RPi-WS2812-HAT/master/img/rpi-ws2812-hat.jpg)](http://www.watterott.com/en/RPi-WS2812-HAT)
 
 
 ## Features
