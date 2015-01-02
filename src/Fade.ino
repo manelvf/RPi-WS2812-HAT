@@ -15,8 +15,8 @@ byte sign=1;
 
 void setup()
 {
+  //init LEDs
   LED.setOutput(DATAPIN);
-
   //LED.setColorOrderRGB(); //uncomment for RGB color order
   //LED.setColorOrderBRG(); //uncomment for BRG color order
   LED.setColorOrderGRB(); //ucomment for GRB color order (default)
