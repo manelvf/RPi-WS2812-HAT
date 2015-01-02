@@ -21,6 +21,8 @@ The examples can be compiled and uploaded using the Arduino IDE with Digistump o
 
 # Raspberry Pi Examples
 
+* Upload the ```I2C_Slave.ino``` example to the ATtiny85 on the RPi-WS2812-HAT.
+
 * Activate I2C:
 
     ```

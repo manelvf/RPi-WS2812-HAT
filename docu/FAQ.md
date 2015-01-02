@@ -1,0 +1,39 @@
+# Frequently Asked Questions
+
+## How much power does the LED-Matrix need?
+The Matrix consists of 64 RGB LEDs and each LED needs about 60mA (3 * 20mA) at full brightness.
+Therefore the maximum current is 64 * 0.06A = 3.8A.
+
+
+## How is the ATtiny85 connected to the RPi?
+The ATtiny85 ist connected via SDA+SCL (I2C) connected to the Raspberry Pi.
+
+
+## Can the Raspberry Pi control the WS2812 LEDs directly?
+For direct control of WS2812 LEDs from the Raspberry Pi have a look at the examples from: 626Pilot and jgarff.
+The jumper next to the reset switch has to be closed to position 18.
+Then the data input of the first WS2812 LED is connected to GPIO18 of the Raspberry Pi.
+
+
+## How to flash/update the ID EEPROM?
+The EEPROM on the HAT can be updated as follows.
+Before the update the **WP** jumper next to the EEPROM has to be closed.
+
+* Install [EEPROM utils](https://github.com/raspberrypi/hats/tree/master/eepromutils):
+    ```
+    $ git clone https://github.com/raspberrypi/hats
+    $ cd hats/eepromutils
+    $ make
+    $ chmod +x eepflash.sh
+    ```
+
+* Generate EEPROM data:
+    ```
+    $ wget https://github.com/watterott/RPi-WS2812-HAT/raw/master/docu/rpi-ws2812-hat.txt
+    $ ./eepmake rpi-ws2812-hat.txt rpi-ws2812-hat.eep
+    ```
+
+* Update EEPROM:
+    ```
+    $ sudo ./eepflash.sh -w -t=24c32 -f=rpi-ws2812-hat.eep
+    ```

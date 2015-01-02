@@ -18,7 +18,6 @@ WS2812B intelligent RGB-LED 8x8 Matrix HAT (Hardware Attached on Top) for Raspbe
 
 
 ## Software
+* [FAQ (Frequently Asked Questions)](https://github.com/watterott/RPi-WS2812-HAT/blob/master/docu/FAQ.md)
 * [Arduino and Raspberry Pi Examples](https://github.com/watterott/RPi-WS2812-HAT/tree/master/src)
 * [Little Wire](http://littlewire.cc) can also be used on the ATtiny85.
-* For direct control of WS2812 LEDs from the Raspberry Pi have a look at the examples from: [626Pilot](https://github.com/626Pilot/RaspberryPi-NeoPixel-WS2812) and [jgarff](https://github.com/jgarff/rpi_ws281x).
-* [How to flash/update the ID EEPROM](https://github.com/watterott/RPi-WS2812-HAT/blob/master/docu/EEPROM.md)
