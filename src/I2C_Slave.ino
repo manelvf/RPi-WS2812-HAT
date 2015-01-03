@@ -4,9 +4,9 @@
   I2C Address: 0x20
   
   Data:
-    Set one LED
+    Set one LED at 0...63
       [0...63] [rrr] [ggg] [bbb]
-    Set LED block (64 LEDs x 24bit color)
+    Set all LEDs (64 LEDs x 24bit color)
       [254] [rrr] [ggg] [bbb] ... [rrr] [ggg] [bbb]
     Set all LEDs off
       [255]

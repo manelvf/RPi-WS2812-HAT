@@ -15,7 +15,7 @@ The examples can be compiled and uploaded using the Arduino IDE with Digistump o
 * Open the example.
 * Select as Board: **ATtiny85 (internal 16.5MHz)** or **Digispark (16.5MHz)**.
 * Select Upload.
-* When the compiling has finished and "Uploading..." is shown, unplug and plug the USB connector or press the reset switch to start the bootloader.
+* When the compiling has finished and "Uploading..." is shown, unplug and plug back in the USB connector or press the reset switch to start the bootloader.
 * Wait till the upload has finished and "Done uploading" is shown.
 
 
@@ -23,18 +23,18 @@ The examples can be compiled and uploaded using the Arduino IDE with Digistump o
 
 * Upload the ```I2C_Slave.ino``` example to the ATtiny85 on the RPi-WS2812-HAT.
 
-* Activate I2C:
-
-    ```
-    $ sudo modprobe i2c_bcm2708 baudrate=100000
-    $ sudo modprobe i2c-dev
-    ```
-
-* Install i2c-tools:
+* Install i2c-tools and python-smbus:
 
     ```
     $ sudo apt-get update
     $ sudo apt-get install i2c-tools
+    $ sudo apt-get install python-smbus
+
+* Activate I2C device:
+
+    ```
+    $ sudo modprobe i2c_bcm2708 baudrate=400000
+    $ sudo modprobe i2c-dev
     ```
 
 * Test I2C bus:
@@ -43,11 +43,8 @@ The examples can be compiled and uploaded using the Arduino IDE with Digistump o
     $ sudo i2cdetect -y 1
     ```
 
-* Set first LED (0x00) to red (r=0x7F g=0x00 b=0x00):
+* Run the Python examples:
 
     ```
-    $ sudo i2cset -y 1 0x20 0x00
-    $ sudo i2cset -y 1 0x20 0x7F
-    $ sudo i2cset -y 1 0x20 0x00
-    $ sudo i2cset -y 1 0x20 0x00
+    $ sudo python Random.py
     ```

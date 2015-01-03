@@ -37,4 +37,9 @@ void loop()
   for(byte i=0; i < LEDCOUNT; i++){ LED.set_crgb_at(i, value); } //set value to LEDs
   LED.sync(); //send the values to the LEDs
   delay(1000); //wait 1s
+
+  value.r = INTENSITY; value.g = INTENSITY; value.b = INTENSITY; //white
+  for(byte i=0; i < LEDCOUNT; i++){ LED.set_crgb_at(i, value); } //set value to LEDs
+  LED.sync(); //send the values to the LEDs
+  delay(1000); //wait 1s
 }
