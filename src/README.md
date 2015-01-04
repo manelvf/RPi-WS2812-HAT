@@ -26,9 +26,9 @@ The examples can be compiled and uploaded using the Arduino IDE with Digistump o
 * Install i2c-tools and python-smbus:
 
     ```
-    $ sudo apt-get update
     $ sudo apt-get install i2c-tools
     $ sudo apt-get install python-smbus
+    ```
 
 * Activate I2C device:
 
