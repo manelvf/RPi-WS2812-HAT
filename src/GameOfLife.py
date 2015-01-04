@@ -27,15 +27,15 @@ def initialize(board):
       board[x][y] = rand
 
 def draw(board):
-  for y in range(8):
-    for x in range(8):
+  bus.write_byte(addr, 0xFE) #write block
+  for x in range(8):
+    for y in range(8):
       #set pixel with color or unset it
       if board[x][y] == 1:
-        bus.write_i2c_block_data(addr, (x*8)+y, [color[0], color[1], color[2]]) #led red green blue
-        time.sleep(0.01) #wait 10ms
+        bus.write_i2c_block_data(addr, color[0], [color[1], color[2]]) #red green blue
       else:
-        bus.write_i2c_block_data(addr, (x*8)+y, [0, 0, 0]) #led red green blue
-        time.sleep(0.01) #wait 10ms
+        bus.write_i2c_block_data(addr, 0, [0, 0]) #red green blue
+    time.sleep(0.020) #wait 20ms
 
 def compute(board):
   #game of live logic

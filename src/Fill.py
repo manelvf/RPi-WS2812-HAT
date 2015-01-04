@@ -4,13 +4,10 @@ bus = smbus.SMBus(1)
 addr = 0x20 #default: 0x20
 intensity = 50 #0...255
 
-#switch off leds
-for x in range(64):
-  bus.write_i2c_block_data(addr, x, [0, 0, 0]) #led red green blue
-  time.sleep(0.005) #wait 5ms
-
 #fade on leds
 for i in range(intensity):
-  for x in range(64):
-    bus.write_i2c_block_data(addr, x, [0, 0, i]) #led red green blue
-    time.sleep(0.005) #wait 5ms
+  bus.write_byte(addr, 0xFE) #write block
+  for x in range(8):
+    for y in range(8):
+      bus.write_i2c_block_data(addr, 0, [0, i]) #red green blue
+    time.sleep(0.010) #wait 10ms

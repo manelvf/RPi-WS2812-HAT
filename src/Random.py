@@ -7,9 +7,8 @@ addr = 0x20 #default: 0x20
 intensity = 50 #0...255
 
 #switch off leds
-for x in range(64):
-  bus.write_i2c_block_data(addr, x, [0, 0, 0]) #led red green blue
-  time.sleep(0.005) #wait 5ms
+bus.write_byte(addr, 0xFF)
+time.sleep(0.100) #wait 100ms
 
 #switch on random leds
 while True:
@@ -18,4 +17,4 @@ while True:
   g = randint(0, intensity)
   b = randint(0, intensity)
   bus.write_i2c_block_data(addr, x, [r, g, b]) #led red green blue
-  time.sleep(0.1) #wait 100ms
+  time.sleep(0.100) #wait 100ms

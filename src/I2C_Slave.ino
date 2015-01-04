@@ -23,7 +23,7 @@
 
 WS2812 LED(LEDCOUNT); 
 
-volatile byte state=0;
+volatile byte state=0, sync=0;
 volatile unsigned long last_data=0;
 
 void reset(void)
@@ -32,6 +32,7 @@ void reset(void)
   TinyWireS.begin(I2C_SLAVE_ADDR); 
 
   state = 0;
+  sync  = 0;
 
   //switch off LEDs
   for(byte i=0; i < LEDCOUNT; i++)
@@ -74,6 +75,7 @@ void receiveEvent(uint8_t size)
           cRGB value = {0,0,0};
           LED.set_crgb_at(i, value);
         }
+        sync = 1;
       }
       if(r == 0xFE) //receive LEDCOUNT
       {
@@ -106,7 +108,7 @@ void receiveEvent(uint8_t size)
       {
         led_pos = 0;
         state   = 0;
-        LED.sync();
+        sync    = 1;
       }
       else if(block != 0)
       {
@@ -115,7 +117,7 @@ void receiveEvent(uint8_t size)
       else
       {
         state = 0;
-        LED.sync();
+        sync  = 1;
       }
     }
   }
@@ -140,6 +142,12 @@ void setup()
 void loop()
 {
   TinyWireS_stop_check();
+
+  if(sync != 0)
+  {
+    sync = 0;
+    LED.sync();
+  }
 
   if(state != 0)
   {
