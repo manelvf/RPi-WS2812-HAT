@@ -8,7 +8,7 @@
 #define LEDCOUNT   64 //number of LEDs to drive
 #define INTENSITY 100 //light intensity
 
-WS2812 LED(LEDCOUNT); 
+WS2812 LED(LEDCOUNT);
 
 cRGB drawcolor[5] = {{  0,  0, INTENSITY/1},  //alive
                      {  0,  0,           0},  //dead

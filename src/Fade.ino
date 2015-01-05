@@ -8,7 +8,7 @@
 #define LEDCOUNT   64 //number of LEDs to drive
 #define INTENSITY 100 //light intensity
 
-WS2812 LED(LEDCOUNT); 
+WS2812 LED(LEDCOUNT);
 
 byte intensity=0;
 byte sign=1;
@@ -31,7 +31,7 @@ void loop()
     intensity++;
     if(intensity == INTENSITY)
     {
-      sign = 0; 
+      sign = 0;
     }
   }
   else

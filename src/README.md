@@ -43,8 +43,9 @@ The examples can be compiled and uploaded using the Arduino IDE with Digistump o
     $ sudo i2cdetect -y 1
     ```
 
-* Run the Python examples:
+* Download and run the Python examples (Random.py, Fill.py...):
 
     ```
+    $ wget https://github.com/watterott/RPi-WS2812-HAT/raw/master/src/Random.py
     $ sudo python Random.py
     ```

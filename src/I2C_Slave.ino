@@ -21,7 +21,7 @@
 #define LEDCOUNT   64 //number of LEDs to drive
 #define INTENSITY 100 //light intensity
 
-WS2812 LED(LEDCOUNT); 
+WS2812 LED(LEDCOUNT);
 
 volatile byte state=0, sync=0;
 volatile unsigned long last_data=0;

@@ -8,7 +8,7 @@
 #define LEDCOUNT   64 //number of LEDs to drive
 #define INTENSITY 100 //light intensity
 
-WS2812 LED(LEDCOUNT); 
+WS2812 LED(LEDCOUNT);
 
 void setup()
 {
