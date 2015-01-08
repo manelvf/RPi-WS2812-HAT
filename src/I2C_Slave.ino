@@ -136,6 +136,7 @@ void setup()
   TinyWireS.onReceive(receiveEvent);
   TinyWireS.onRequest(requestEvent);
 
+  //switch off LEDs
   reset();
 }
 
@@ -149,13 +150,15 @@ void loop()
     LED.sync();
   }
 
-  if(state != 0)
+  if(state != 0) //receiving data
   {
     unsigned long ms = millis();
     if((ms-last_data) > 500) //reset I2C after 500ms inactivity
     {
       last_data = ms;
-      reset();
+      state = 0;
+      sync  = 1;
+      //reset();
     }
   }
 }

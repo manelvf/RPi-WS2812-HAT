@@ -3,7 +3,7 @@
  */
 
 #include <WS2812.h>
-#include <avr/pgmspace.h>
+//#include <avr/pgmspace.h>
 
 #define DATAPIN     1 //digital output pin (data input of LEDs)
 #define LEDCOUNT   64 //number of LEDs to drive
