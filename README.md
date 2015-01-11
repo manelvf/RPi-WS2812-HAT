@@ -3,13 +3,13 @@ WS2812B intelligent RGB-LED 8x8 Matrix HAT (Hardware Attached on Top) for Raspbe
 
 Shop: [RPi-WS2812-HAT](http://www.watterott.com/en/RPi-WS2812-HAT)
 
-[![RPi-WS2812-HAT](https://raw.github.com/watterott/RPi-WS2812-HAT/master/img/rpi-ws2812-hat.jpg)](http://www.watterott.com/en/RPi-WS2812-HAT)
+[![RPi-WS2812-HAT](https://raw.github.com/watterott/RPi-WS2812-HAT/master/pcb/RPi-WS2812-HAT_v10.jpg)](http://www.watterott.com/en/RPi-WS2812-HAT)
 
 
 ## Features
 * 64 WS2812 RGB-LED with built-in controller with serial interface
-* Atmel ATtiny85 microcontroller with [Micronucleus](https://github.com/micronucleus/micronucleus) USB Bootloader
-* microUSB connector
+* Atmel ATtiny85 with [Micronucleus](https://github.com/micronucleus/micronucleus) USB Bootloader
+* MicroUSB connector
 * ID EEPROM
 * [Raspberry Pi HAT](https://github.com/raspberrypi/hats) compatible
 
