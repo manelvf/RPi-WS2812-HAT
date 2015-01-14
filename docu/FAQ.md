@@ -6,11 +6,11 @@ Therefore the maximum current is 64 * 0.06A = 3.8A.
 
 
 ## How is the ATtiny85 connected to the RPi?
-The ATtiny85 ist connected via SDA+SCL (I2C) connected to the Raspberry Pi.
+The ATtiny85 is connected via SDA+SCL (I2C) to the Raspberry Pi.
 
 
 ## Can the Raspberry Pi control the WS2812 LEDs directly?
-For direct control of WS2812 LEDs from the Raspberry Pi have a look at the examples from: 626Pilot and jgarff.
+For direct control of the WS2812 LEDs from the Raspberry Pi have a look at the examples from: [626Pilot](https://github.com/626Pilot/RaspberryPi-NeoPixel-WS2812) and [jgarff](https://github.com/jgarff/rpi_ws281x).
 The jumper next to the reset switch has to be closed to position 18.
 Then the data input of the first WS2812 LED is connected to GPIO18 of the Raspberry Pi.
 
