@@ -10271,7 +10271,7 @@ USB 2.0 - AU-Y1006-2-R&lt;br&gt;</description>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="DAT" library="we-rcl" deviceset="JUMPER3" device="-0603"/>
-<part name="R8" library="we-rcl" deviceset="RESISTOR" device="-R0402" value="2k2"/>
+<part name="R8" library="we-rcl" deviceset="RESISTOR" device="-R0402" value="1k5"/>
 <part name="RESET" library="we-switch" deviceset="SW-TACTILE" device="-TL3315"/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="P+15" library="supply1" deviceset="+5V" device=""/>
@@ -10292,8 +10292,8 @@ USB 2.0 - AU-Y1006-2-R&lt;br&gt;</description>
 <part name="R10" library="we-rcl" deviceset="RESISTOR" device="-R0402" value="3k9"/>
 <part name="P+16" library="supply1" deviceset="+5V" device=""/>
 <part name="P+17" library="supply1" deviceset="+5V" device=""/>
-<part name="DZ1" library="we-rcl" deviceset="DIODE" device="-SOD882" value="uClamp2511T"/>
-<part name="DZ2" library="we-rcl" deviceset="DIODE" device="-SOD882" value="uClamp2511T"/>
+<part name="DZ1" library="we-rcl" deviceset="DIODE" device="-SOD882" value="Z3V6"/>
+<part name="DZ2" library="we-rcl" deviceset="DIODE" device="-SOD882" value="Z3V6"/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="P+10" library="supply1" deviceset="+5V" device=""/>
 </parts>
@@ -10310,9 +10310,9 @@ USB 2.0 - AU-Y1006-2-R&lt;br&gt;</description>
 <wire x1="217.805" y1="73.66" x2="219.075" y2="73.66" width="0.3048" layer="94"/>
 <text x="91.44" y="93.98" size="1.778" layer="97">The used USB-Bootloader on the ATtiny85 is Micronucleus 
 https://github.com/micronucleus/micronucleus</text>
-<text x="203.2" y="62.23" size="1.27" layer="97">TVS-Diode: 3.1V, 6pF
-DigiKey:
-UCLAMP2511TTCTDKR-ND</text>
+<text x="187.96" y="44.45" size="1.27" layer="97">CZRER52C3V6 (3.6V &lt;180pF) + 1k5 Pull-Up
+or
+uClamp2511T (3.1V 6pF) + 2k2 Pull-Up</text>
 <text x="158.75" y="83.82" size="1.27" layer="97">Pin 1</text>
 <text x="158.75" y="86.36" size="1.27" layer="97">Pin 4</text>
 <text x="158.75" y="81.28" size="1.27" layer="97">Pin 2</text>
@@ -10458,7 +10458,7 @@ outputs in TwoWire mode</text>
 <attribute name="VALUE" x="95.885" y="21.59" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="DZ1" gate="D" x="198.12" y="66.04" rot="R90"/>
-<instance part="DZ2" gate="D" x="187.96" y="64.77" rot="R90"/>
+<instance part="DZ2" gate="D" x="187.96" y="66.04" rot="R90"/>
 <instance part="GND15" gate="1" x="193.04" y="53.34" smashed="yes">
 <attribute name="VALUE" x="190.5" y="50.8" size="1.778" layer="96"/>
 </instance>
@@ -10591,7 +10591,7 @@ outputs in TwoWire mode</text>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="198.12" y1="55.88" x2="193.04" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="DZ2" gate="D" pin="A"/>
-<wire x1="187.96" y1="62.23" x2="187.96" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="63.5" x2="187.96" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="55.88" x2="193.04" y2="55.88" width="0.1524" layer="91"/>
 <junction x="193.04" y="55.88"/>
 </segment>
@@ -10793,7 +10793,7 @@ outputs in TwoWire mode</text>
 <wire x1="185.42" y1="78.74" x2="187.96" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="DZ2" gate="D" pin="C"/>
 <wire x1="187.96" y1="78.74" x2="228.6" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="78.74" x2="187.96" y2="67.31" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="78.74" x2="187.96" y2="68.58" width="0.1524" layer="91"/>
 <junction x="187.96" y="78.74"/>
 </segment>
 </net>
