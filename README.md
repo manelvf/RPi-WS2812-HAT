@@ -14,11 +14,8 @@ Shop: [RPi-WS2812-HAT](http://www.watterott.com/en/RPi-WS2812-HAT)
 * [Raspberry Pi HAT](https://github.com/raspberrypi/hats) compatible
 
 
-## Hardware
+## Hardware and Software
 * [Schematics + Layout](https://github.com/watterott/RPi-WS2812-HAT/tree/master/pcb)
-
-
-## Software
-* [FAQ (Frequently Asked Questions)](https://github.com/watterott/RPi-WS2812-HAT/blob/master/docu/FAQ.md)
 * [Arduino and Raspberry Pi Examples](https://github.com/watterott/RPi-WS2812-HAT/tree/master/src)
 * [Little Wire](http://littlewire.cc) can also be used on the ATtiny85.
+* [FAQ (Frequently Asked Questions)](https://github.com/watterott/RPi-WS2812-HAT/blob/master/docu/FAQ.md)
