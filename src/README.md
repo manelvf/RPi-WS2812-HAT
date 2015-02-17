@@ -2,7 +2,7 @@
 The examples can be compiled and uploaded using the Arduino IDE with Digistump or our ATtiny85 extension.
 
 ## Files
-* [Arduino IDE 1.5](http://arduino.cc/en/Main/Software)
+* [Arduino IDE v1.6](http://arduino.cc/en/Main/Software)
 * Extensions
   * [ATtiny85](https://github.com/watterott/wattuino/tree/master/src/Arduino)
   * [Digistump](https://github.com/digistump/DigistumpArduino)
@@ -14,7 +14,7 @@ The examples can be compiled and uploaded using the Arduino IDE with Digistump o
 
 ## Upload
 * Open the example.
-* Select as Board: **ATtiny85 (internal 16.5MHz)** or **Digispark (16.5MHz)**.
+* Select under Tools->Board: **ATtiny85 (internal 16.5MHz)** or **Digispark (16.5MHz)**.
 * Select Upload.
 * When the compiling has finished and "Uploading..." is shown, unplug and plug back in the USB connector or press the reset switch to start the bootloader.
 * Wait till the upload has finished and "Done uploading" is shown.
